@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Laboratorio2.Web;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Globalization;
+using System.Linq;
 
 namespace Laboratorio1.Web
 {
@@ -24,7 +27,12 @@ namespace Laboratorio1.Web
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             var builder = services.AddMvc()
-                .AddSessionStateTempDataProvider();
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization(options =>
+                {   // Enable loading SharedResource for ModelLocalizer
+                    options.DataAnnotationLocalizerProvider = (type, factory) =>
+                        factory.Create(typeof(SharedResource));
+                }).AddSessionStateTempDataProvider();
 
 #if DEBUG
             builder.AddRazorRuntimeCompilation();
@@ -59,12 +67,28 @@ namespace Laboratorio1.Web
 
             app.UseStaticFiles();
 
+            app.UseRequestLocalization(SupportedCultures.CultureNames);
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+    }
+
+    public static class SupportedCultures
+    {
+        public readonly static string[] CultureNames;
+        public readonly static CultureInfo[] Cultures;
+
+        static SupportedCultures()
+        {
+            CultureNames = new[] { "it-it", "en-gb" };
+            Cultures = CultureNames.Select(c => new CultureInfo(c)).ToArray();
+
+            //NB: attenzione nel progetto a settare correttamente <NeutralLanguage>it-IT</NeutralLanguage>
         }
     }
 }
