@@ -1,4 +1,4 @@
-﻿using Laboratorio2.Services.Clienti;
+using Laboratorio2.Services.Clienti;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Onit.AspNetCore.Infrastructure;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Laboratorio2.Web.Areas.Clienti
 {
-    public class ClientiController : Controller
+    public partial class ClientiController : Controller
     {
         private readonly ClientiService _clientiService;
 
