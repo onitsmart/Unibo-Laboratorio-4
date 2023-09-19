@@ -1,12 +1,12 @@
 using Laboratorio2.Services.Clienti;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using Onit.AspNetCore.Infrastructure;
 using System;
 using System.Threading.Tasks;
 
-namespace Laboratorio2.Web.Areas.Clienti
+namespace Laboratorio2.Web.Areas.Clienti.Clienti
 {
+    [Area("Clienti")]
     public partial class ClientiController : Controller
     {
         private readonly ClientiService _clientiService;
@@ -28,7 +28,8 @@ namespace Laboratorio2.Web.Areas.Clienti
         [HttpPost]
         public virtual async Task<IActionResult> New()
         {
-            return RedirectToAction();
+            var model = new EditViewModel();
+            return View(model);
         }
 
         [HttpGet]
@@ -38,7 +39,7 @@ namespace Laboratorio2.Web.Areas.Clienti
 
             if (idCliente.HasValue)
             {
-                var cliente = await _clientiService.Query(new DettaglioClienteQuery { Id = idCliente });
+                var cliente = await _clientiService.Query(new DettaglioClienteQuery { IdCliente = idCliente.Value });
                 model.SetCliente(cliente);
             }
 
@@ -66,7 +67,7 @@ namespace Laboratorio2.Web.Areas.Clienti
                 Alerts.AddError(this, "Errore in aggiornamento");
             }
 
-            return RedirectToAction(Actions.Edit(model.Id?.ToString()));
+            return View(model);
         }
 
     }

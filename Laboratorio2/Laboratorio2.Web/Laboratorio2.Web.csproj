@@ -5,11 +5,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Content Remove="Views\Shared\_LayoutHtml.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
         <Content Include="node_modules\bootstrap\dist\css\bootstrap.css" />
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Infrastructure\" />
         <Folder Include="Jobs\" />
         <Folder Include="wwwroot\images\" />
         <Folder Include="wwwroot\fonts\" />
@@ -17,6 +20,7 @@
 
     <ItemGroup>
         <None Include="node_modules\bootstrap\dist\js\bootstrap.js" />
+        <None Include="Views\Shared\_LayoutHtml.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -46,6 +50,14 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>IndexViewModel.cs</DependentUpon>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Shared\_LayoutHtml.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Shared\_LayoutHtml.cshtml" />
     </ItemGroup>
 
 </Project>

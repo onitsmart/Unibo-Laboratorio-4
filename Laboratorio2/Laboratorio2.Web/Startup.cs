@@ -1,5 +1,4 @@
-﻿using Laboratorio2.Web;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
@@ -8,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using System.Globalization;
 using System.Linq;
 
-namespace Laboratorio1.Web
+namespace Laboratorio2.Web
 {
     public class Startup
     {
@@ -73,6 +72,7 @@ namespace Laboratorio1.Web
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapAreaControllerRoute("Clienti", "Clienti", "Clienti/{controller=Clienti}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
         }

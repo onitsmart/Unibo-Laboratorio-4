@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
-namespace Laboratorio1.Web.Features.Home
+namespace Laboratorio2.Web.Features.Home
 {
     public partial class HomeController : Controller
     {

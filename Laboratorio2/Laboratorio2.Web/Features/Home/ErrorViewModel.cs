@@ -1,4 +1,4 @@
-namespace Laboratorio1.Web.Features.Home
+namespace Laboratorio2.Web.Features.Home
 {
     public class ErrorViewModel
     {

@@ -7,7 +7,7 @@ namespace Laboratorio2.Web.Areas.Clienti
     {
         public Guid? Id { get; set; }
 
-        public void SetCliente(ClientiInElencoDTO cliente)
+        public void SetCliente(DettaglioClienteDTO cliente)
         {
             throw new NotImplementedException();
         }

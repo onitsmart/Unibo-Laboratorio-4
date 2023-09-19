@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Routing;
 using R4Mvc;
 
-namespace Laboratorio2.Web.Areas.Clienti
+namespace Laboratorio2.Web.Areas.Clienti.Clienti
 {
     public partial class ClientiController
     {
@@ -91,9 +91,9 @@ namespace Laboratorio2.Web.Areas.Clienti
         }
 
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ClientiController Actions => MVC.Clienti;
+        public ClientiController Actions => MVC.Clienti.Clienti;
         [GeneratedCode("R4Mvc", "1.0")]
-        public readonly string Area = "";
+        public readonly string Area = "Clienti";
         [GeneratedCode("R4Mvc", "1.0")]
         public readonly string Name = "Clienti";
         [GeneratedCode("R4Mvc", "1.0")]
@@ -118,36 +118,6 @@ namespace Laboratorio2.Web.Areas.Clienti
             public const string Edit = "Edit";
         }
 
-        [GeneratedCode("R4Mvc", "1.0")]
-        static readonly ActionParamsClass_Index s_IndexParams = new ActionParamsClass_Index();
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ActionParamsClass_Index IndexParams => s_IndexParams;
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_Index
-        {
-            public readonly string model = "model";
-        }
-
-        [GeneratedCode("R4Mvc", "1.0")]
-        static readonly ActionParamsClass_Edit s_EditParams = new ActionParamsClass_Edit();
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ActionParamsClass_Edit EditParams => s_EditParams;
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_Edit
-        {
-            public readonly string idCliente = "idCliente";
-        }
-
-        [GeneratedCode("R4Mvc", "1.0")]
-        static readonly ActionParamsClass_Edit s_EditParams = new ActionParamsClass_Edit();
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public ActionParamsClass_Edit EditParams => s_EditParams;
-        [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_Edit
-        {
-            public readonly string model = "model";
-        }
-
         [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
         public class ViewsClass
         {
@@ -165,7 +135,7 @@ namespace Laboratorio2.Web.Areas.Clienti
     }
 
     [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-    public partial class R4MVC_ClientiController : Laboratorio2.Web.Areas.Clienti.ClientiController
+    public partial class R4MVC_ClientiController : Laboratorio2.Web.Areas.Clienti.Clienti.ClientiController
     {
         public R4MVC_ClientiController(): base(Dummy.Instance)
         {

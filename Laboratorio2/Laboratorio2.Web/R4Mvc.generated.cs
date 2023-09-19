@@ -18,8 +18,9 @@ using R4Mvc;
 [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
-    public static readonly Laboratorio2.Web.Areas.Clienti.ClientiController Clienti = new Laboratorio2.Web.Areas.Clienti.R4MVC_ClientiController();
-    public static readonly Laboratorio1.Web.Features.Home.HomeController Home = new Laboratorio1.Web.Features.Home.R4MVC_HomeController();
+    static readonly R4Mvc.ClientiAreaClass s_Clienti = new R4Mvc.ClientiAreaClass();
+    public static R4Mvc.ClientiAreaClass Clienti => s_Clienti;
+    public static readonly Laboratorio2.Web.Features.Home.HomeController Home = new Laboratorio2.Web.Features.Home.R4MVC_HomeController();
     public static readonly R4Mvc.SharedController Shared = new R4Mvc.SharedController();
 }
 
@@ -51,16 +52,23 @@ namespace R4Mvc
             {
                 public readonly string Error = "Error";
                 public readonly string _Layout = "_Layout";
-                public readonly string _ValidationScriptsPartial = "_ValidationScriptsPartial";
+                public readonly string _LayoutHtml = "_LayoutHtml";
             }
 
             public readonly string Error = "~/Views/Shared/Error.cshtml";
             public readonly string _Layout = "~/Views/Shared/_Layout.cshtml";
-            public readonly string _ValidationScriptsPartial = "~/Views/Shared/_ValidationScriptsPartial.cshtml";
+            public readonly string _LayoutHtml = "~/Views/Shared/_LayoutHtml.cshtml";
         }
 
         static readonly ViewsClass s_Views = new ViewsClass();
         public ViewsClass Views => s_Views;
+    }
+
+    [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
+    public partial class ClientiAreaClass
+    {
+        public readonly string Name = "Clienti";
+        public readonly Laboratorio2.Web.Areas.Clienti.Clienti.ClientiController Clienti = new Laboratorio2.Web.Areas.Clienti.Clienti.R4MVC_ClientiController();
     }
 }
 

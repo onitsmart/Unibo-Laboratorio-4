@@ -26,7 +26,7 @@ namespace Laboratorio2.Services.Clienti
         public Guid IdCliente { get; set; }
     }
 
-    public class DettaglioClienteInElencoDTO
+    public class DettaglioClienteDTO
     {
     }
 
@@ -39,7 +39,7 @@ namespace Laboratorio2.Services.Clienti
             return null;
         }
 
-        public async Task<DettaglioClienteInElencoDTO> Query(DettaglioClienteQuery qry)
+        public async Task<DettaglioClienteDTO> Query(DettaglioClienteQuery qry)
         {
             // Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
 

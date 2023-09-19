@@ -1,19 +1,20 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Laboratorio1.Web</title>
-    <link href="~/css/bundle-global.css" asp-append-version="true" rel="stylesheet" />
-    <link href="~/node_modules/@@fortawesome/fontawesome-free/css/all.css" asp-append-version="true" rel="stylesheet" />
-    @RenderSection("styles", required: false)
-</head>
-<body>
+﻿@inject IHtmlLocalizer<Laboratorio2.Web.SharedResource> SharedLocalizer
+@inject Microsoft.Extensions.Options.IOptions<AppSettings> appSettings
+@{
+    Layout = "_LayoutHtml";
+    var version = System.Reflection.Assembly.GetAssembly(typeof(Startup)).GetName().Version;
+}
+@section metas{
+    @RenderSection("metas", false)
+}
+@section styles{
+    @RenderSection("styles", false)
+}
+<div id="pageId">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Laboratorio1.Web</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Laboratorio2.Web</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,16 +32,16 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <main>
         @RenderBody()
-    </div>
-
+    </main>
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Laboratorio1.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Laboratorio2.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/js/bundle-global.js" asp-append-version="true"></script>
-    @RenderSection("scripts", required: false)
-</body>
-</html>
+</div>
+@section scripts{
+    @this.RenderScriptAlertsWithToastify()
+    @RenderSection("scripts", false)
+}

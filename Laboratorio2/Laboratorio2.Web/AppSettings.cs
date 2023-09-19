@@ -1,4 +1,4 @@
-﻿namespace Laboratorio1.Web
+﻿namespace Laboratorio2.Web
 {
     public class AppSettings
     {

@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Routing;
 using R4Mvc;
 
-namespace Laboratorio1.Web.Features.Home
+namespace Laboratorio2.Web.Features.Home
 {
     public partial class HomeController
     {
@@ -111,7 +111,12 @@ namespace Laboratorio1.Web.Features.Home
             public _ViewNamesClass ViewNames => s_ViewNames;
             public class _ViewNamesClass
             {
+                public readonly string Index = "Index";
+                public readonly string Privacy = "Privacy";
             }
+
+            public readonly string Index = "~/Features/Home/Index.cshtml";
+            public readonly string Privacy = "~/Features/Home/Privacy.cshtml";
         }
 
         [GeneratedCode("R4Mvc", "1.0")]
@@ -121,7 +126,7 @@ namespace Laboratorio1.Web.Features.Home
     }
 
     [GeneratedCode("R4Mvc", "1.0"), DebuggerNonUserCode]
-    public partial class R4MVC_HomeController : Laboratorio1.Web.Features.Home.HomeController
+    public partial class R4MVC_HomeController : Laboratorio2.Web.Features.Home.HomeController
     {
         public R4MVC_HomeController(): base(Dummy.Instance)
         {

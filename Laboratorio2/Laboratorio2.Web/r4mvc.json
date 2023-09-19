@@ -11,10 +11,10 @@
   "ExcludedStaticFileExtensions": null,
   "ReferencedNamespaces": null,
   "PragmaCodes": null,
-  "GenerateParamsForActionMethods": true,
+  "GenerateParamsForActionMethods": false,
   "ParamsPropertySuffix": "Params",
   "FeatureFolders": {
-    "Enabled": false,
+    "Enabled": true,
     "FeaturesPath": "Features",
     "StaticFileAccess": false,
     "FeatureOnlyAreas": null

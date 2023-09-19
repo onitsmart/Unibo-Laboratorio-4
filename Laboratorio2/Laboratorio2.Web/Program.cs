@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Laboratorio1.Web
+namespace Laboratorio2.Web
 {
     public class Program
     {
