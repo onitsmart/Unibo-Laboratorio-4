@@ -9,22 +9,19 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="node_modules\bootstrap\dist\css\bootstrap.css" />
-    </ItemGroup>
-
-    <ItemGroup>
         <Folder Include="Jobs\" />
+        <Folder Include="node_modules\" />
         <Folder Include="wwwroot\images\" />
         <Folder Include="wwwroot\fonts\" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="node_modules\bootstrap\dist\js\bootstrap.js" />
         <None Include="Views\Shared\_LayoutHtml.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.11" />
       <PackageReference Include="Onit.AspNetCore.Infrastructure" Version="1.0.0" />
       <PackageReference Include="R4Mvc" Version="1.0.0-alpha2-00395" />
       <PackageReference Include="R4Mvc.Tools-alphavaleriob" Version="1.0.0-alphavaleriob-00395">
@@ -38,14 +35,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Areas\Clienti\IndexViewModel.cs">
+      <Compile Update="Areas\Clienti\Clienti\IndexViewModel.cs">
         <Generator>DtsGenerator</Generator>
         <LastGenOutput>IndexViewModel.cs.d.ts</LastGenOutput>
       </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="Areas\Clienti\IndexViewModel.cs.d.ts">
+      <None Update="Areas\Clienti\Clienti\IndexViewModel.cs.d.ts">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>IndexViewModel.cs</DependentUpon>

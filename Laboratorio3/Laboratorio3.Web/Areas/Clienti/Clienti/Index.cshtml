@@ -1,4 +1,4 @@
-﻿@model Laboratorio3.Web.Areas.Clienti.IndexViewModel
+﻿@model Laboratorio3.Web.Areas.Clienti.Clienti.IndexViewModel
 @{
     ViewData["Title"] = "Clienti";
 }
@@ -72,7 +72,7 @@
                             {
                                 <tr>
                                     <td scope="row">
-                                        <a href="@cliente.UrlEdit" title="Modifica elemento"> @cliente.RagioneSocialeONominativo</a>
+                                        <a href="@Url.Action(MVC.Clienti.Clienti.Edit(cliente.Id))" title="Modifica elemento"> @cliente.RagioneSocialeONominativo</a>
                                     </td>
                                     <td class="text-nowrap">@cliente.Indirizzo</td>
                                     <td class="text-nowrap">@cliente.Comune</td>

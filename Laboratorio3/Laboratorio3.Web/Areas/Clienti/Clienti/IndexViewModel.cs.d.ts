@@ -5,7 +5,6 @@ declare module server {
 		totaleElementi: number;
 	}
 	interface clienteInElencoViewModel {
-		urlEdit: string;
 		id: any;
 		ragioneSocialeONominativo: string;
 		indirizzo: string;

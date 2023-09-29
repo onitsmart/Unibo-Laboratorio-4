@@ -3,7 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace Laboratorio3.Web.Areas.Clienti
+namespace Laboratorio3.Web.Areas.Clienti.Clienti
 {
     public class IndexViewModel
     {
@@ -40,10 +40,8 @@ namespace Laboratorio3.Web.Areas.Clienti
 
         public ClienteInElencoViewModel(ClienteInElencoDTO dto)
         {
-            //ES1 Valorizzare proprietà del modello dal dto passato come parametro
+            // ES2 Valorizzare proprietà del modello dal dto passato come parametro
         }
-
-        public string UrlEdit { get; set; }
 
         public Guid Id { get; set; }
 

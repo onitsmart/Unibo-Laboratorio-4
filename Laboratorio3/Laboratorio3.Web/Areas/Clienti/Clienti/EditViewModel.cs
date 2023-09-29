@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Laboratorio3.Web.Areas.Clienti
+namespace Laboratorio3.Web.Areas.Clienti.Clienti
 {
     public class EditViewModel
     {

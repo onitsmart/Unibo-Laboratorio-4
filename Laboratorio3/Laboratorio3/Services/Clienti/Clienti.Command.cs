@@ -16,14 +16,14 @@ namespace Laboratorio3.Services.Clienti
     {
         public async Task<Guid> Handle(AddOrUpdateClienteCommand cmd)
         {
-            // Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
+            // ES2 Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
 
             return Guid.NewGuid();
         }
 
         public async Task Handle(DeleteClienteCommand cmd)
         {
-            // Implementare logica eliminazione cliente
+            // ES2 Implementare logica eliminazione cliente
 
             return;
         }

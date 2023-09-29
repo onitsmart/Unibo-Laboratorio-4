@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Laboratorio3.Services.Clienti
@@ -17,6 +19,8 @@ namespace Laboratorio3.Services.Clienti
 
     public class ClienteInElencoDTO
     {
+        public Guid Id { get; set; }
+        public string RagioneSociale { get; set; }
     }
 
     public class DettaglioClienteQuery
@@ -32,14 +36,14 @@ namespace Laboratorio3.Services.Clienti
     {
         public async Task<ClientiInElencoDTO> Query(ClientiInElencoQuery qry)
         {
-            // Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
+            // ES2 Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
 
             return null;
         }
 
         public async Task<DettaglioClienteDTO> Query(DettaglioClienteQuery qry)
         {
-            // Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
+            // ES2 Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
 
             return null;
         }

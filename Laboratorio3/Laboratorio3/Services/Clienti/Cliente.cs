@@ -1,10 +1,14 @@
-﻿namespace Laboratorio3.Services.Clienti
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace Laboratorio3.Services.Clienti
 {
     public class Cliente
     {
-        // Aggiungere le proprietà che si vogliono gestire sul cliente.
-        // Aggiungere gli attributi [Key], [DatabaseGenerated(DatabaseGeneratedOption.Identity)] sulla chiave (il secondo solo se usate un'identity a db)
-        // Aggiungere attributi [ForeignKey("IdCliente")] [InverseProperty("Tags")] per costruire navigations su tabelle collegate tramite foreign key
+        [Key]
+        public Guid Id { get; set; }
+
+        public string RagioneSocialeONominativo { get; set; }
     }
 
     public enum StatoCliente
