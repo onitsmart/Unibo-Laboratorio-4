@@ -70,7 +70,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
         }
 
         [HttpPost]
-        public virtual async Task<IActionResult> Delete(int id)
+        public virtual async Task<IActionResult> Delete(Guid id)
         {
             await _clientiService.Handle(new DeleteClienteCommand { Id = id });
             Alerts.AddSuccess(this, "Eliminazione effettuata correttamente");

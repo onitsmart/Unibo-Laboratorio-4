@@ -9,6 +9,7 @@ namespace Laboratorio3.Services.Clienti
 
     public class DeleteClienteCommand
     {
+        public Guid Id { get; set; }
     }
 
     public partial class ClientiService

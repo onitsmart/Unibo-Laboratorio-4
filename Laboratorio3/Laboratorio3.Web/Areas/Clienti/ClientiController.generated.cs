@@ -194,9 +194,9 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
         }
 
         [NonAction]
-        partial void DeleteOverride(R4Mvc_Microsoft_AspNetCore_Mvc_ActionResult callInfo, int id);
+        partial void DeleteOverride(R4Mvc_Microsoft_AspNetCore_Mvc_ActionResult callInfo, System.Guid id);
         [NonAction]
-        public override System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.IActionResult> Delete(int id)
+        public override System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.IActionResult> Delete(System.Guid id)
         {
             var callInfo = new R4Mvc_Microsoft_AspNetCore_Mvc_ActionResult(Area, Name, ActionNames.Delete);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "id", id);
