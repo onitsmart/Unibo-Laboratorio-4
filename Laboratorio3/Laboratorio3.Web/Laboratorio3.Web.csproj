@@ -36,17 +36,8 @@
 
     <ItemGroup>
       <Compile Update="Areas\Clienti\Clienti\IndexViewModel.cs">
-        <Generator>DtsGenerator</Generator>
-        <LastGenOutput>IndexViewModel.cs.d.ts</LastGenOutput>
+        <Generator></Generator>
       </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Update="Areas\Clienti\Clienti\IndexViewModel.cs.d.ts">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>IndexViewModel.cs</DependentUpon>
-      </None>
     </ItemGroup>
 
     <ItemGroup>
