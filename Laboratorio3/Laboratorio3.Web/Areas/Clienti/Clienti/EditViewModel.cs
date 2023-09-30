@@ -54,11 +54,13 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
 
         public void SetCliente(DettaglioClienteDTO cliente)
         {
+            // ES4 Implementare modello
             throw new NotImplementedException();
         }
 
         public AddOrUpdateClienteCommand ToAddOrUpdateClienteCommand()
         {
+            // ES5 ES6 Implementare creazione comando a partire dai dati del modello
             return new AddOrUpdateClienteCommand();
         }
     }

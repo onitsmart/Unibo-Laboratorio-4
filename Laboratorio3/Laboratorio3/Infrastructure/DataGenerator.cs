@@ -16,6 +16,7 @@ namespace Laboratorio3.Infrastructure
                 return;   // Data was already seeded
             }
 
+            // ES2.1 Aggiunta proprietà del cliente
             context.Clienti.AddRange(
                 new Cliente
                 {

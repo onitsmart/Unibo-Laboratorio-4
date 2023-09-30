@@ -27,6 +27,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
 
         public ClientiInElencoQuery ToClientiInElencoQuery()
         {
+            // ES3 Passaggio filtro, già implementato
             return new ClientiInElencoQuery
             {
                 Filtro = this.Filtro
@@ -40,9 +41,8 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
 
         public ClienteInElencoViewModel(ClienteInElencoDTO dto)
         {
-            Id = dto.Id;
-            RagioneSocialeONominativo = dto.RagioneSociale;
             // ES2 Valorizzare proprietà del modello dal dto passato come parametro
+            // ES2.1 Aggiunta proprietà del cliente
         }
 
         public Guid Id { get; set; }

@@ -5,6 +5,8 @@ namespace Laboratorio3.Services.Clienti
 {
     public class Cliente
     {
+        // ES2.1 Aggiunta proprietà del cliente
+
         [Key]
         public Guid Id { get; set; }
 

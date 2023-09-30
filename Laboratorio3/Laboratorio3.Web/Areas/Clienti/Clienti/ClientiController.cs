@@ -39,6 +39,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
 
             if (idCliente.HasValue)
             {
+                // ES4 Implementare query e modello
                 var cliente = await _clientiService.Query(new DettaglioClienteQuery { IdCliente = idCliente.Value });
                 model.SetCliente(cliente);
             }
@@ -53,6 +54,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
             {
                 try
                 {
+                    // ES5 ES6 Implementare comando e modello
                     model.Id = await _clientiService.Handle(model.ToAddOrUpdateClienteCommand());
                     Alerts.AddSuccess(this, "Informazioni aggiornate");
                 }
@@ -72,6 +74,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
         [HttpPost]
         public virtual async Task<IActionResult> Delete(Guid id)
         {
+            // ES7 Implementare comando
             await _clientiService.Handle(new DeleteClienteCommand { Id = id });
             Alerts.AddSuccess(this, "Eliminazione effettuata correttamente");
             return RedirectToAction(Actions.Index());

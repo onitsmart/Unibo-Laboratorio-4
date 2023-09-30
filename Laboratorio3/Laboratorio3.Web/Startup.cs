@@ -37,14 +37,6 @@ namespace Laboratorio3.Web
 
             var builder = services.AddMvc();
 
-            // ES3 Decommenta per usare localizzazione
-            //builder.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-            //    .AddDataAnnotationsLocalization(options =>
-            //    {   // Enable loading SharedResource for ModelLocalizer
-            //        options.DataAnnotationLocalizerProvider = (type, factory) =>
-            //            factory.Create(typeof(SharedResource));
-            //    });
-
 #if DEBUG
             builder.AddRazorRuntimeCompilation();
 #endif
@@ -80,9 +72,6 @@ namespace Laboratorio3.Web
 
             app.UseStaticFiles();
 
-            // ES3 Decommenta per usare localizzazione
-            //app.UseRequestLocalization(SupportedCultures.CultureNames);
-
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -92,19 +81,4 @@ namespace Laboratorio3.Web
             });
         }
     }
-
-    // ES3 Decommenta per usare localizzazione
-    //public static class SupportedCultures
-    //{
-    //    public readonly static string[] CultureNames;
-    //    public readonly static CultureInfo[] Cultures;
-
-    //    static SupportedCultures()
-    //    {
-    //        CultureNames = new[] { "it-it", "en-gb" };
-    //        Cultures = CultureNames.Select(c => new CultureInfo(c)).ToArray();
-
-    //        //NB: attenzione nel progetto a settare correttamente <NeutralLanguage>it-IT</NeutralLanguage>
-    //    }
-    //}
 }

@@ -36,14 +36,16 @@ namespace Laboratorio3.Services.Clienti
     {
         public async Task<ClientiInElencoDTO> Query(ClientiInElencoQuery qry)
         {
-            // ES2 Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
+            // ES2 Implementare logica caricamento clienti per elenco
+            // ES2.1 Aggiunta proprietà del cliente
+            // ES3 Modificare implementazione per gestione filtro
 
             return null;
         }
 
         public async Task<DettaglioClienteDTO> Query(DettaglioClienteQuery qry)
         {
-            // ES2 Implementare logica salvataggio nuovo cliente o aggiornamento cliente esistente
+            // ES4 Implementare logica caricamento dettaglio cliente
 
             return null;
         }
