@@ -18,12 +18,4 @@ namespace Laboratorio3.Services.Clienti
         Attivo = 3,
         Obsoleto = 4
     }
-
-    public enum AreaCliente
-    {
-        Privati = 1,
-        PA = 2,
-        Industria = 3,
-        Sanità = 4
-    }
 }

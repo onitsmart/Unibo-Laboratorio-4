@@ -5,6 +5,8 @@ namespace Laboratorio3.Services.Clienti
 {
     public class AddOrUpdateClienteCommand
     {
+        public Guid Id { get; set; }
+        public string RagioneSocialeONominativo { get; set; }
     }
 
     public class DeleteClienteCommand

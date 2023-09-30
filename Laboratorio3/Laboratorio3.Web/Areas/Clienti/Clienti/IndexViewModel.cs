@@ -40,6 +40,8 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
 
         public ClienteInElencoViewModel(ClienteInElencoDTO dto)
         {
+            Id = dto.Id;
+            RagioneSocialeONominativo = dto.RagioneSociale;
             // ES2 Valorizzare proprietà del modello dal dto passato come parametro
         }
 
@@ -62,9 +64,10 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
 
         [Display(Name = "Data primo ordine")]
         public DateTime? DataPrimoOrdine { get; set; }
-        public string DateDataPrimoOrdineAsString { get; set; }
+        public string DataPrimoOrdineAsString { get; set; }
 
         [Display(Name = "Stato")]
         public StatoCliente Stato { get; set; }
+        public string StatoAsString { get; set; }
     }
 }
