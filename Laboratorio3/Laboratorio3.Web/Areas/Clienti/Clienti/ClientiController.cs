@@ -1,6 +1,5 @@
 using Laboratorio3.Services.Clienti;
 using Microsoft.AspNetCore.Mvc;
-using Onit.AspNetCore.Infrastructure;
 using System;
 using System.Threading.Tasks;
 
@@ -56,7 +55,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
                 {
                     // ES5 ES6 Implementare comando e modello
                     model.Id = await _clientiService.Handle(model.ToAddOrUpdateClienteCommand());
-                    Alerts.AddSuccess(this, "Informazioni aggiornate");
+                    //Alerts.AddSuccess(this, "Informazioni aggiornate");
                 }
                 catch (Exception e)
                 {
@@ -65,7 +64,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
 
             if (ModelState.IsValid == false)
             {
-                Alerts.AddError(this, "Errore in aggiornamento");
+                //Alerts.AddError(this, "Errore in aggiornamento");
             }
 
             return View(model);
@@ -76,7 +75,7 @@ namespace Laboratorio3.Web.Areas.Clienti.Clienti
         {
             // ES7 Implementare comando
             await _clientiService.Handle(new DeleteClienteCommand { Id = id });
-            Alerts.AddSuccess(this, "Eliminazione effettuata correttamente");
+            //Alerts.AddSuccess(this, "Eliminazione effettuata correttamente");
             return RedirectToAction(Actions.Index());
         }
     }
