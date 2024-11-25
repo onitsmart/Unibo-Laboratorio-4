@@ -21,17 +21,47 @@ namespace Laboratorio4.Infrastructure
                 new Cliente
                 {
                     Id = Guid.NewGuid(),
-                    RagioneSocialeONominativo = "Pippo spa"
+                    RagioneSocialeONominativo = "Pippo spa",
+                    Indirizzo = "Via Roma 1",
+                    Comune = "Roma",
+                    Provincia = "RM",
+                    CapitaleSociale = 10000,
+                    DataPrimoOrdine = DateTime.Now,
+                    Stato = StatoCliente.Attivo,
+                    CAP = "00100",
+                    PIVA = "12345678901",
+                    RagioneSocialeFatturazione = "Pippo spa",
+                    Note = "Note di Pippo"
                 },
                 new Cliente
                 {
                     Id = Guid.NewGuid(),
-                    RagioneSocialeONominativo = "Pluto High Quality Software srl"
+                    RagioneSocialeONominativo = "Pluto High Quality Software srl",
+                    Indirizzo = "Via Milano 2",
+                    Comune = "Milano",
+                    Provincia = "MI",
+                    CapitaleSociale = 20000,
+                    DataPrimoOrdine = DateTime.Now,
+                    Stato = StatoCliente.Attivo,
+                    CAP = "20100",
+                    PIVA = "98765432109",
+                    RagioneSocialeFatturazione = "Pluto High Quality Software srl",
+                    Note = "Note di Pluto"
                 },
                 new Cliente
                 {
                     Id = Guid.NewGuid(),
-                    RagioneSocialeONominativo = "Paperino & co"
+                    RagioneSocialeONominativo = "Paperino & co",
+                    Indirizzo = "Via Napoli 3",
+                    Comune = "Napoli",
+                    Provincia = "NA",
+                    CapitaleSociale = 30000,
+                    DataPrimoOrdine = DateTime.Now,
+                    Stato = StatoCliente.Obsoleto,
+                    CAP = "30100",
+                    PIVA = "12309845670",
+                    RagioneSocialeFatturazione = "Paperino & co",
+                    Note = "Note di Paperino"
                 });
 
             context.SaveChanges();

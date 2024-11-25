@@ -50,12 +50,24 @@ namespace Laboratorio4.Web.Areas.Clienti.Clienti
 
         [Display(Name = "Data primo ordine")]
         public DateTime? DataPrimoOrdine { get; set; }
-        public string DateDataPrimoOrdineAsString { get; set; }
+        public string DataPrimoOrdineAsString { get; set; }
 
         public void SetCliente(DettaglioClienteDTO cliente)
         {
             // ES4 Implementare modello
-            throw new NotImplementedException();
+            this.Id = cliente.Id;
+            this.RagioneSocialeONominativo = cliente.RagioneSocialeONominativo;
+            this.Stato = cliente.Stato;
+            this.CapitaleSociale = cliente.CapitaleSociale;
+            this.RagioneSocialeFatturazione = cliente.RagioneSocialeFatturazione;
+            this.PIVA = cliente.PIVA;
+            this.Indirizzo = cliente.Indirizzo;
+            this.CAP = cliente.CAP;
+            this.Comune = cliente.Comune;
+            this.Provincia = cliente.Provincia;
+            this.Note = cliente.Note;
+            this.DataPrimoOrdine = cliente.DataPrimoOrdine;
+            this.DataPrimoOrdineAsString = cliente.DataPrimoOrdine?.ToString();
         }
 
         public AddOrUpdateClienteCommand ToAddOrUpdateClienteCommand()
