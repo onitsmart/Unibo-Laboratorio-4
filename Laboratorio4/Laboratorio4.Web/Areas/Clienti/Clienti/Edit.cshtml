@@ -9,7 +9,7 @@
         ViewData["Title"] = "Inserimento nuovo cliente";
     }
 }
-@section pageTitle{
+@section pageTitle {
     <nav class="navbar navbar-expand navbar-light flex-wrap">
         <div class="navbar-brand text-truncate">
             @ViewData["Title"]
@@ -26,7 +26,10 @@
         @if (Model.Id != null)
         {
             <div class="dropdown">
-                <button class="btn btn-light ms-2" type="button" id="dropdownMenuAltreAzioni" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Altre azioni"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <button class="btn btn-light ms-2" type="button" id="dropdownMenuAltreAzioni" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Altre azioni">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    Altre azioni
+                </button>
 
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuAltreAzioni">
                     <h6 class="dropdown-header">Altre azioni</h6>
@@ -45,7 +48,7 @@
     </nav>
 }
 
-@section pageSubtitle{
+@section pageSubtitle {
 }
 
 <div>
@@ -53,6 +56,9 @@
         <div class="row">
             <div class="col-12">
                 <form autocomplete="off" method="post" class="onit-form-sm" action="@Url.Action(MVC.Clienti.Clienti.Edit())" id="edit-form">
+                    <!-- ES5: IMPORTANTE aggiungere questo input altrimenti quando i dati arrivano al modello l'ID sarà sempre nullo e, una volta passati al comando, non riuscirete a capire quale cliente aggiornare -->
+                    <input type="hidden" asp-for="Id" />
+
                     <!-- Enables form submit on Enter -->
                     <input id="edit-form-submitter" class="d-none" type="submit" />
                     <fieldset class="pb-3">
@@ -118,8 +124,8 @@
                         <div class="row">
                             <div class="form-group col-md-6 col-lg-8 col-xl-6">
                                 <label asp-for="Note"></label>
-                                <textbox class="form-control form-control-sm" asp-for="Note">
-                                    <span asp-validation-for="Note" class="text-danger"></span>
+                                <textarea class="form-control form-control-sm" asp-for="Note"></textarea>
+                                <span asp-validation-for="Note" class="text-danger"></span>
                             </div>
                         </div>
                     </fieldset>

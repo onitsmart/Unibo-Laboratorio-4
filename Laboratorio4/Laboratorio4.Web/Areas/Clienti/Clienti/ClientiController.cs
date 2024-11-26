@@ -67,7 +67,8 @@ namespace Laboratorio4.Web.Areas.Clienti.Clienti
                 //Alerts.AddError(this, "Errore in aggiornamento");
             }
 
-            return View(model);
+            // Modificata per ottenere il flusso spiegato a lezione con il PRG (Post-Redirect-Get)
+            return RedirectToAction(MVC.Clienti.Clienti.Edit(model.Id));
         }
 
         [HttpPost]

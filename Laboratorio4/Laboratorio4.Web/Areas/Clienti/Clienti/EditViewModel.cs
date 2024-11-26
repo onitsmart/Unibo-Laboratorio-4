@@ -28,7 +28,7 @@ namespace Laboratorio4.Web.Areas.Clienti.Clienti
         public decimal? CapitaleSociale { get; set; }
 
         [Display(Name = "Ragione sociale di fatturazione")]
-        public string RagioneSocialeFatturazione{ get; set; }
+        public string RagioneSocialeFatturazione { get; set; }
 
         [Display(Name = "Partita IVA")]
         public string PIVA { get; set; }
@@ -73,7 +73,21 @@ namespace Laboratorio4.Web.Areas.Clienti.Clienti
         public AddOrUpdateClienteCommand ToAddOrUpdateClienteCommand()
         {
             // ES5 ES6 Implementare creazione comando a partire dai dati del modello
-            return new AddOrUpdateClienteCommand();
+            return new AddOrUpdateClienteCommand
+            {
+                Id = this.Id,
+                RagioneSocialeONominativo = this.RagioneSocialeONominativo,
+                Stato = this.Stato,
+                CapitaleSociale = this.CapitaleSociale,
+                RagioneSocialeFatturazione = this.RagioneSocialeFatturazione,
+                PIVA = this.PIVA,
+                Indirizzo = this.Indirizzo,
+                CAP = this.CAP,
+                Comune = this.Comune,
+                Provincia = this.Provincia,
+                Note = this.Note,
+                DataPrimoOrdine = this.DataPrimoOrdine
+            };
         }
     }
 }
